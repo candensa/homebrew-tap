@@ -5,21 +5,21 @@
 class Candensa < Formula
   desc "Candensa CLI — deploy anything, on any infrastructure, from one control plane."
   homepage "https://candensa.sh"
-  version "0.3.0"
+  version "0.3.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/candensa/engine/releases/download/v0.3.0/candensa_0.3.0_darwin_amd64.tar.gz"
-      sha256 "0c7c89b3fec6b4c7d3dae2cd6be8c16ff85516e2e873bce5dad1b9a38c5a513d"
+      url "https://github.com/candensa/releases/releases/download/v0.3.1/candensa_0.3.1_darwin_amd64.tar.gz"
+      sha256 "05e373c80c8e492ea766f83d3cbb8ae93ffcd3d445391c8ac73ca14d4fb98b9f"
 
       define_method(:install) do
         bin.install "candensa"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/candensa/engine/releases/download/v0.3.0/candensa_0.3.0_darwin_arm64.tar.gz"
-      sha256 "ef175f69cee41ce3de97248e3b89ae7705cfdddfbb648a11dadb4585692e6b59"
+      url "https://github.com/candensa/releases/releases/download/v0.3.1/candensa_0.3.1_darwin_arm64.tar.gz"
+      sha256 "ad0c39bbeffd54acb5343fa59a8da09225e5bb7eac5d84e61c643bcea7133acd"
 
       define_method(:install) do
         bin.install "candensa"
@@ -29,15 +29,15 @@ class Candensa < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/candensa/engine/releases/download/v0.3.0/candensa_0.3.0_linux_amd64.tar.gz"
-      sha256 "1ef13600e39a53739d8ea3c499123f6495406e8d9bab87e060f664bb205dcef3"
+      url "https://github.com/candensa/releases/releases/download/v0.3.1/candensa_0.3.1_linux_amd64.tar.gz"
+      sha256 "07e4dc45f98c4356ff407409d0eb746ca2620d805b860585650d2fc7c85246f9"
       define_method(:install) do
         bin.install "candensa"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/candensa/engine/releases/download/v0.3.0/candensa_0.3.0_linux_arm64.tar.gz"
-      sha256 "bc917c7d538e2ea33cbf8048b8a29a6b6df2b7446fa00db20ab7a78782bcfdc7"
+      url "https://github.com/candensa/releases/releases/download/v0.3.1/candensa_0.3.1_linux_arm64.tar.gz"
+      sha256 "c4956a94f7bf88972b81bb4d9b8cb3d52f1f0318b9b86511377075dc3424a551"
       define_method(:install) do
         bin.install "candensa"
       end
